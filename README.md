@@ -1,7 +1,4 @@
-- 👋 Hi, I’m @SudarshanaSRao
-- 👀 I’m interested in coding in python
-- 🌱 I’m currently learning machine learning
-- 📫 How to reach me ...
+The images are the dataset for the ML model. Store them in a folder named 'light' in the pwd or present working directory of the python compiler.
 
 <!---
 SudarshanaSRao/SudarshanaSRao is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
