@@ -1,0 +1,50 @@
+#include <SoftwareSerial.h>
+
+int ledPin = 8;                // choose the pin for the LED
+int inputPin = 2;               // choose the input pin (for PIR sensor)
+int pirState = LOW;             // we start, assuming no motion detected
+int val = 0;
+//int sms_count=0; // variable for reading the pin status
+int buzz = 11;                  // buzzer pin at 11
+SoftwareSerial mySerial(9, 10);
+//char msg;
+
+void setup() 
+{
+  mySerial.begin(9600);   // Setting the baud rate of GSM Module
+  Serial.begin(9600);    // Setting the baud rate of Serial Monitor (Arduino)
+  pinMode(ledPin, OUTPUT);      // declare LED as output
+  pinMode(inputPin, INPUT);     // declare pir sensor as input
+  pinMode(buzz, OUTPUT);        // declare buzzer as output
+}
+
+void loop()
+{
+   val = digitalRead(inputPin);  // read input value of the pir sensor
+   if (val == HIGH)  // check if the input is HIGH
+   {
+     digitalWrite(ledPin, HIGH);  // turn LED ON
+     digitalWrite(buzz, HIGH); //ACTIVATE BUZZER
+       Serial.println("Motion detected!\r\n\n");
+       Serial.println("Alerting Admin/Owner \r\n\n");
+       mySerial.println("AT+CMGF=1");    //To send SMS in Text Mode
+       delay(500);
+       mySerial.println("AT+CMGS=\"+\919632189239\"\r");// Vignesh's number. 
+       delay(500);
+       mySerial.println("Someone is Trying to Break IN \r\n\n");//the content of the message
+       delay(200);
+       mySerial.println("Succesfully Sent Message from GSM Module \r\n");//the stopping character
+       delay(800);
+       // We only want to print on the output change, not state 
+     }
+
+
+
+   if (val == LOW)  // check if the input is LOW
+   {
+     digitalWrite(ledPin, LOW); // turn LED OFF
+     digitalWrite(buzz, LOW);  // turn off buzzer
+     delay(1000);
+     }
+
+ }
