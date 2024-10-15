@@ -1,3 +1,5 @@
+# [Project details](https://sudarshanasrao.github.io/portfolio/portfolio-6/) | [Paper publication](https://www.ijamtes.org/VOL-11-ISSUE-7-2021/)
+
 This ML model requires no datasets.
 The Arduino code is in the file called- "Burglar_alarm."
 <!---
