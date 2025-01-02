@@ -17,5 +17,3 @@ Here are some of the core topics covered in this repository:
 - **Recursion and Backtracking**
 - **Hashing**
 - **Searching Algorithms (Binary Search, Linear Search)**
-
-data-structures-algorithms-python/ │ ├── arrays_strings/ │ └── array_sum.py │ └── string_reverse.py │ ├── linked_lists/ │ └── singly_linked_list.py │ └── doubly_linked_list.py │ ├── trees/ │ └── binary_tree.py │ └── binary_search_tree.py │ ├── graphs/ │ └── bfs.py │ └── dfs.py │ └── sorting_algorithms/ └── quick_sort.py └── merge_sort.py └── bubble_sort.py
