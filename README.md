@@ -11,7 +11,7 @@ This project integrates machine learning for intelligent burglar alarm detection
 
 ## Machine Learning Model
 
-![vid](https://github.com/SudarshanaSRao/Python-and-its-applications-in-ML/assets/87690830/668b97ba-88f2-4001-8a6c-a2eaa6fe86ab)
+![vid](https://github.com/SudarshanaSRao/Python-and-its-applications-in-ML/assets/87690830/668b97ba-88f2-4001-8f6c-a2eaa6fe86ab)
 
 The ML model (OpenCV2 + Histogram of Oriented Gradients or HOG + Support Vector Machine or SVM) is designed to detect patterns in real-time sensor data (such as motion or sound) and make decisions on whether a security breach has occurred. 
 
